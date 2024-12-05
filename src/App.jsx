@@ -1,26 +1,25 @@
 import { useState } from 'react'
-import workintech from '/workintech.svg'
 import './App.css'
 import Home from './pages/home'
 import Siparis from './pages/siparis'
 import Sonuc from './pages/sonuc'
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom"
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
 
-function App() {
-  const [count, setCount] = useState(0)
+function  App() {
 
   return (
     <>
     <Switch>
-      <Route exact path="/">
+      <Route  path="/">
        <Home/>
       </Route>
     
-      <Route exact path="/siparis">
+      <Route  path="/siparis">
        <Siparis/>
       </Route>
 
-      <Route exact  path="/sonuc">
+      <Route   path="/sonuc">
        <Sonuc/>
       </Route>
     </Switch>
